@@ -1,0 +1,6 @@
+#To see these hit this URL : http://localhost:8888/service-a/default
+chintanu:
+  testprop: "ServiceA"
+  secretpwd: "{cipher}44e939283db6b551f609a3dc08ac195c1873edcbccd8e503e891ea4d12a5edf8"
+gitrepo:
+  testprop: "This is wrong location of this property"

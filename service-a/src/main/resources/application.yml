@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: service-a
+  config:
+    import: "optional:configserver:http://localhost:9999/"
+  profiles:
+    active:
+      - prod
+valAnnotationCheck: "Testinggggg"
+configAnnotationCheck:
+  test1 : "Test1"
+  test2 : "Test2"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"

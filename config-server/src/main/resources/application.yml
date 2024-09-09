@@ -1,0 +1,32 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+#            - "classpath:/" ============> Never use this in config server as this might override the default props like server.port for config server clients
+            - "classpath:/config"
+            - "classpath:/config/{application}"
+#            - "classpath:/config/{application}/{profile}" ============> This setting was not needed as above 2 are sufficing all scenario. Without this also the Profile works
+#            - Also the search location can be a file-location like this : "file:///PAth//to//local//config//folder"
+  profiles:
+    active: native
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+
+encrypt:
+  key: "gDI3MR5knMynPewa0dv1SsQosrWUZDvQM5ajIufpMagVaRxdsHnItrE3wpk/RwHC"

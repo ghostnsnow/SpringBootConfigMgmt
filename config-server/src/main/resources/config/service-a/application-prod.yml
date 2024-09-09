@@ -1,0 +1,3 @@
+#To see these hit this URL : http://localhost:8888/service-a/prod
+chintanu:
+  testprop: "ServiceA-Prod"
